@@ -57,4 +57,35 @@ func main() {
 
 	fmt.Println(i + i)
 	// fmt.Println(i + i8) invalid operation: i + i8 (mismatched types int and int8)
+	fmt.Println()
+
+	fmt.Println("## 課題4")
+
+	fmt.Printf("%v: ", b)
+	fmt.Printf("%T, ", b)
+	fmt.Printf("%p, ", &b)
+	fmt.Printf("%t, ", b)
+	fmt.Println()
+
+	fmt.Printf("%v: ", i)
+	fmt.Printf("%T, ", i)
+	fmt.Printf("%p, ", &i)
+	fmt.Printf("%b, ", i)
+	fmt.Printf("%d, ", i)
+	fmt.Printf("%o, ", i)
+	fmt.Println()
+
+	fmt.Printf("%v: ", f)
+	fmt.Printf("%T, ", f)
+	fmt.Printf("%p, ", &f)
+	fmt.Printf("%b, ", f)
+	fmt.Printf("%g, ", f)
+	fmt.Println()
+
+	fmt.Printf("%v: ", str_variable1)
+	fmt.Printf("%T, ", str_variable1)
+	fmt.Printf("%p, ", &str_variable1)
+	fmt.Printf("%s, ", str_variable1)
+	fmt.Println()
+
 }

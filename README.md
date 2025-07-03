@@ -52,3 +52,19 @@ go run main.go
 
 ### 学び
 - 別タイプの数値は計算することができない
+
+
+## 課題3: fmt.Printf()で様々なフォーマット指定子を使用する
+
+### 学び
+| formatter | value |
+|-----------|-------|
+|     %v      |   value in default format   |
+|     %T      |   type   |
+|     %p      |   pointer    |
+|      %t     |    boolean   |
+|       %b    |    base2   |
+|       %d    |    base10   |
+|       %o    |    base8  |
+|       %g    |    float32 / 64  |
+|       %s    |    string  |
