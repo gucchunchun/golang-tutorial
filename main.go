@@ -5,10 +5,26 @@ import "fmt"
 
 // Entry point
 func main() {
-	fmt.Println("## 課題１")
-	fmt.Println("Hello World")
+	task1()
 	fmt.Println()
 
+	task2()
+	fmt.Println()
+
+	task3()
+	fmt.Println()
+
+	task4()
+	fmt.Println()
+
+}
+
+func task1() {
+	fmt.Println("## 課題1")
+	fmt.Println("Hello World")
+}
+
+func task2() {
 	fmt.Println("## 課題2")
 	// ○: initialize the zero-value of the type
 	var str_variable1 string
@@ -22,8 +38,9 @@ func main() {
 	fmt.Println(str_variable1)
 	fmt.Println(str_variable2)
 	fmt.Println(str_variable3)
-	fmt.Println()
+}
 
+func task3() {
 	fmt.Println("## 課題3")
 	var (
 		b bool
@@ -57,8 +74,13 @@ func main() {
 
 	fmt.Println(i + i)
 	// fmt.Println(i + i8) invalid operation: i + i8 (mismatched types int and int8)
-	fmt.Println()
+}
 
+func task4() {
+	b := false
+	i := 100
+	f := 3.14
+	s := "Hello World"
 	fmt.Println("## 課題4")
 
 	fmt.Printf("%v: ", b)
@@ -82,10 +104,8 @@ func main() {
 	fmt.Printf("%g, ", f)
 	fmt.Println()
 
-	fmt.Printf("%v: ", str_variable1)
-	fmt.Printf("%T, ", str_variable1)
-	fmt.Printf("%p, ", &str_variable1)
-	fmt.Printf("%s, ", str_variable1)
-	fmt.Println()
-
+	fmt.Printf("%v: ", s)
+	fmt.Printf("%T, ", s)
+	fmt.Printf("%p, ", &s)
+	fmt.Printf("%s, ", s)
 }
