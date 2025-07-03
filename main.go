@@ -32,6 +32,8 @@ func main() {
 	task8()
 	fmt.Println()
 
+	task9()
+	fmt.Println()
 }
 
 func task1() {
@@ -176,4 +178,15 @@ func task8() {
 
 	sum := add(a, b)
 	fmt.Println(sum)
+}
+
+func task9() {
+	fmt.Println("## 課題9")
+
+	lottery := func() (int, bool) {
+		a := rand.Intn(100)
+		return a, a == 50
+	}
+
+	fmt.Println(lottery())
 }
