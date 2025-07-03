@@ -34,6 +34,9 @@ func main() {
 
 	task9()
 	fmt.Println()
+
+	task10()
+	fmt.Println()
 }
 
 func task1() {
@@ -189,4 +192,34 @@ func task9() {
 	}
 
 	fmt.Println(lottery())
+}
+
+func task10() {
+	fmt.Println("## 課題10")
+
+	mustBe50 := func(i int) error {
+		if i == 50 {
+			return nil
+		}
+		return fmt.Errorf("not 50")
+	}
+
+	a := 50
+	b := 51
+
+	fmt.Println(a)
+	if err := mustBe50(a); err != nil {
+		fmt.Println("Error occurred:", err)
+	} else {
+		fmt.Printf("%d is 50!\n", a)
+	}
+	fmt.Println(b)
+	if err := mustBe50(b); err != nil {
+		fmt.Println("Error occurred:", err)
+	} else {
+		fmt.Printf("%d is 50!\n", b)
+	}
+
+	fmt.Println(mustBe50(50))
+	fmt.Println(mustBe50(51))
 }
