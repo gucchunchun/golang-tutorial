@@ -54,7 +54,7 @@ go run main.go
 - 別タイプの数値は計算することができない
 
 
-## 課題3: fmt.Printf()で様々なフォーマット指定子を使用する
+## 課題4: fmt.Printf()で様々なフォーマット指定子を使用する
 
 ### 学び
 | formatter | value |
@@ -68,3 +68,6 @@ go run main.go
 |       %o    |    base8  |
 |       %g    |    float32 / 64  |
 |       %s    |    string  |
+
+## 課題5: if文とelse文を使った条件分岐を実装する
+

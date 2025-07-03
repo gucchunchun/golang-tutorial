@@ -1,7 +1,10 @@
 // Namespace
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 // Entry point
 func main() {
@@ -15,6 +18,9 @@ func main() {
 	fmt.Println()
 
 	task4()
+	fmt.Println()
+
+	task5()
 	fmt.Println()
 
 }
@@ -108,4 +114,19 @@ func task4() {
 	fmt.Printf("%T, ", s)
 	fmt.Printf("%p, ", &s)
 	fmt.Printf("%s, ", s)
+	fmt.Println()
+}
+
+func task5() {
+	fmt.Println("## 課題5")
+
+	a := rand.Int()
+	b := rand.Int()
+
+	fmt.Printf("a: %d, b: %d\n", a, b)
+	if a > b {
+		fmt.Println("a > b")
+	} else {
+		fmt.Println("a <= b")
+	}
 }
