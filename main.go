@@ -29,6 +29,9 @@ func main() {
 	task7()
 	fmt.Println()
 
+	task8()
+	fmt.Println()
+
 }
 
 func task1() {
@@ -159,4 +162,18 @@ func task7() {
 		fmt.Println("落選")
 	}
 
+}
+
+func task8() {
+	fmt.Println("## 課題8")
+
+	add := func(a int, b int) int {
+		return a + b
+	}
+
+	a := 1
+	b := 3
+
+	sum := add(a, b)
+	fmt.Println(sum)
 }
