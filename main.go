@@ -23,6 +23,9 @@ func main() {
 	task5()
 	fmt.Println()
 
+	task6()
+	fmt.Println()
+
 }
 
 func task1() {
@@ -128,5 +131,11 @@ func task5() {
 		fmt.Println("a > b")
 	} else {
 		fmt.Println("a <= b")
+	}
+}
+
+func task6() {
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
 	}
 }
