@@ -26,6 +26,9 @@ func main() {
 	task6()
 	fmt.Println()
 
+	task7()
+	fmt.Println()
+
 }
 
 func task1() {
@@ -135,7 +138,25 @@ func task5() {
 }
 
 func task6() {
+	fmt.Println("## 課題6")
 	for i := 0; i < 10; i++ {
 		fmt.Println(i)
 	}
+}
+func task7() {
+	fmt.Println("## 課題7")
+
+	a := rand.Intn(100)
+
+	fmt.Printf("a: %d\n", a)
+
+	// a = 50
+
+	switch a {
+	case 50:
+		fmt.Println("当選")
+	default:
+		fmt.Println("落選")
+	}
+
 }
