@@ -37,6 +37,9 @@ func main() {
 
 	task10()
 	fmt.Println()
+
+	task11()
+	fmt.Println()
 }
 
 func task1() {
@@ -222,4 +225,56 @@ func task10() {
 
 	fmt.Println(mustBe50(50))
 	fmt.Println(mustBe50(51))
+}
+
+func task11() {
+	fmt.Println("## 課題11")
+
+	// Array
+	a := [5]int{1, 2, 3, 4, 5}
+	fmt.Println(a)
+	fmt.Println(a[0])
+	fmt.Println(a[1])
+	fmt.Println(a[2])
+	fmt.Println(a[3])
+	fmt.Println(a[4])
+	fmt.Println()
+
+	as := [5]string{"a", "b", "c", "d", "e"}
+	fmt.Println(as)
+	fmt.Println()
+
+	// Slice
+	s := a[1:4]
+	fmt.Println(s)
+	fmt.Println(s[0])
+	fmt.Println(s[1])
+	fmt.Println(s[2])
+	fmt.Println()
+
+	ss := as[1:4]
+	fmt.Println(ss)
+	fmt.Println(ss[0])
+	fmt.Println(ss[1])
+	fmt.Println(ss[2])
+	fmt.Println()
+
+	// Equivalent Expressions
+	ss = as[0:5]
+	fmt.Println(ss)
+	ss = as[0:]
+	fmt.Println(ss)
+	ss = as[:5]
+	fmt.Println(ss)
+	ss = as[:]
+	fmt.Println(ss)
+	fmt.Println()
+
+	ss[0] = "f"
+	fmt.Println(as)
+	fmt.Println(ss)
+	fmt.Println()
+
+	sb := []bool{true, true, false}
+	fmt.Println(sb)
 }
