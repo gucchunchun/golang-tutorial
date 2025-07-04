@@ -40,6 +40,9 @@ func main() {
 
 	task11()
 	fmt.Println()
+
+	task12()
+	fmt.Println()
 }
 
 func task1() {
@@ -277,4 +280,43 @@ func task11() {
 
 	sb := []bool{true, true, false}
 	fmt.Println(sb)
+}
+
+func task12() {
+	fmt.Println("## 課題12")
+
+	s := []int{1, 2, 3, 4, 5}
+	fmt.Println(s)
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+	fmt.Println()
+
+	s = append(s, 6)
+	fmt.Println(s)
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+	fmt.Println()
+
+	s = append(s, 7, 8, 9)
+	fmt.Println(s)
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+	fmt.Println()
+
+	s = append(s, 10, 11, 12)
+	fmt.Println(s)
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+	fmt.Println()
+
+	s = s[:0]
+	fmt.Println(s)
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+	fmt.Println()
+
+	s = s[:4]
+	fmt.Println(s)
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+	fmt.Println()
+
+	s = s[2:]
+	fmt.Println(s)
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+	fmt.Println()
 }
