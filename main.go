@@ -22,6 +22,7 @@ func main() {
 		task11,
 		task12,
 		task13,
+		task14,
 	}
 
 	for i, task := range tasks {
@@ -325,4 +326,72 @@ func task13() {
 		fmt.Println(i)
 	}
 
+}
+
+func task14() {
+	// 作成
+	m := map[string]int{
+		"a": 1,
+		"b": 2,
+		"c": 3,
+	}
+	fmt.Println(m)
+	fmt.Println()
+
+	// 追加
+	m["d"] = 4
+	fmt.Println(m)
+	fmt.Println()
+
+	// 削除
+	delete(m, "d")
+	fmt.Println(m)
+	fmt.Println()
+
+	//検索
+	fmt.Println(m["a"])
+	fmt.Println(m["b"])
+	fmt.Println(m["c"])
+	fmt.Println(m["d"])
+	fmt.Println(m["e"])
+	fmt.Println()
+
+	// string
+	fmt.Println("ms")
+	ms := map[string]string{
+		"a": "1",
+		"b": "2",
+		"c": "3",
+	}
+	fmt.Println(ms)
+	fmt.Println(ms["d"] == "")
+	fmt.Println()
+
+	// bool
+	fmt.Println("mb")
+	mb := map[string]bool{
+		"a": true,
+		"b": true,
+		"c": false,
+	}
+	fmt.Println(mb)
+	fmt.Println(mb["d"])
+	fmt.Println()
+
+	// nil map
+	fmt.Println("mNil")
+	var mNil map[string]int
+	fmt.Println(mNil)
+	fmt.Println(mNil == nil)
+	// mNil["a"] = 1
+	// fmt.Println(mNil)
+	fmt.Println()
+
+	// make()
+	fmt.Println("mMake")
+	var mMake = make(map[string]int)
+	fmt.Println(mMake)
+	fmt.Println(mMake == nil)
+	mMake["a"] = 1
+	fmt.Println(mMake)
 }
