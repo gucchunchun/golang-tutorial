@@ -23,6 +23,7 @@ func main() {
 		task12,
 		task13,
 		task14,
+		task15,
 	}
 
 	for i, task := range tasks {
@@ -400,4 +401,16 @@ func task14() {
 	fmt.Println(elem, ok)
 	elem, ok = m["e"]
 	fmt.Println(elem, ok)
+}
+
+func task15() {
+	// 構造体の定義
+	type Person struct {
+		Name string
+		Age  int
+	}
+
+	// 構造体の作成
+	p := Person{Name: "Alice", Age: 30}
+	fmt.Println(p)
 }

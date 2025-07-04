@@ -119,3 +119,6 @@ go run main.go
 - 存在しないkeyで検索した場合はvalueの型におけるzero-typeが表示される
 - varを使用して値していなく作成したmapはnilになってしまうため、keyやvalueの追加が行えない
 - makeを使用して作成したmapはnil出ないためkey, valueの追加が可能
+
+
+## 課題15: 基本的な構造体を定義し、インスタンスを作成する
