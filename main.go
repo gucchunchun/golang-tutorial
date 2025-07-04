@@ -33,6 +33,7 @@ func main() {
 		task18,
 		task19,
 		task20,
+		task21,
 	}
 
 	for i, task := range tasks {
