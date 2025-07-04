@@ -3,9 +3,11 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"math/rand"
 	"strconv"
 	"strings"
+	"time"
 )
 
 // Entry point
@@ -30,6 +32,7 @@ func main() {
 		task17,
 		task18,
 		task19,
+		task20,
 	}
 
 	for i, task := range tasks {
@@ -505,4 +508,29 @@ func task19() {
 		fmt.Println(f)
 		fmt.Printf("%T", f)
 	}
+}
+
+func task20() {
+	name := "Alice"
+	age := 30
+
+	fmt.Printf("Name: %s, Age: %d\n", name, age)
+	fmt.Println()
+
+	num := 64.0
+	fmt.Printf("Sqrt: %f\n", math.Sqrt(num))
+	fmt.Println()
+
+	fmt.Printf("現在の時刻は: %s\n", time.Now().Format("2006-01-02 15:04:05"))
+	fmt.Println()
+
+	input := "I love Go. Go is awesome!"
+	fmt.Println(strings.ReplaceAll(input, "Go", "Golang"))
+	fmt.Println()
+
+	i := 123
+	s := strconv.Itoa(i)
+	fmt.Println(s)
+	fmt.Println()
+
 }
