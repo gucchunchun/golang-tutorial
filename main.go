@@ -4,6 +4,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"strconv"
 	"strings"
 )
 
@@ -28,6 +29,7 @@ func main() {
 		task16,
 		task17,
 		task18,
+		task19,
 	}
 
 	for i, task := range tasks {
@@ -459,4 +461,48 @@ func task18() {
 	input = "   Hello, World!   "
 	fmt.Println(strings.TrimSpace(input))
 
+}
+
+func task19() {
+	// int -> string
+	i := 123
+	s := strconv.Itoa(i)
+	fmt.Println(s)
+	fmt.Printf("%T", s)
+	fmt.Println()
+
+	// string -> int
+	s = "456"
+	i, err := strconv.Atoi(s)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(i)
+		fmt.Printf("%T", s)
+	}
+	fmt.Println()
+
+	// float -> int
+	f := 3.14
+	i = int(f)
+	fmt.Println(i)
+	fmt.Printf("%T", s)
+	fmt.Println()
+
+	// bool -> string
+	b := true
+	s = strconv.FormatBool(b)
+	fmt.Println(s)
+	fmt.Printf("%T", s)
+	fmt.Println()
+
+	// string -> float
+	s = "3.14"
+	f, err = strconv.ParseFloat(s, 64)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(f)
+		fmt.Printf("%T", f)
+	}
 }
