@@ -8,50 +8,34 @@ import (
 
 // Entry point
 func main() {
-	task1()
-	fmt.Println()
+	tasks := []func(){
+		task1,
+		task2,
+		task3,
+		task4,
+		task5,
+		task6,
+		task7,
+		task8,
+		task9,
+		task10,
+		task11,
+		task12,
+		task13,
+	}
 
-	task2()
-	fmt.Println()
-
-	task3()
-	fmt.Println()
-
-	task4()
-	fmt.Println()
-
-	task5()
-	fmt.Println()
-
-	task6()
-	fmt.Println()
-
-	task7()
-	fmt.Println()
-
-	task8()
-	fmt.Println()
-
-	task9()
-	fmt.Println()
-
-	task10()
-	fmt.Println()
-
-	task11()
-	fmt.Println()
-
-	task12()
-	fmt.Println()
+	for i, task := range tasks {
+		fmt.Printf("## 課題%d\n", i+1)
+		task()
+		fmt.Println()
+	}
 }
 
 func task1() {
-	fmt.Println("## 課題1")
 	fmt.Println("Hello World")
 }
 
 func task2() {
-	fmt.Println("## 課題2")
 	// ○: initialize the zero-value of the type
 	var str_variable1 string
 	// △: not best practice?
@@ -67,7 +51,6 @@ func task2() {
 }
 
 func task3() {
-	fmt.Println("## 課題3")
 	var (
 		b bool
 		i int
@@ -107,7 +90,6 @@ func task4() {
 	i := 100
 	f := 3.14
 	s := "Hello World"
-	fmt.Println("## 課題4")
 
 	fmt.Printf("%v: ", b)
 	fmt.Printf("%T, ", b)
@@ -138,8 +120,6 @@ func task4() {
 }
 
 func task5() {
-	fmt.Println("## 課題5")
-
 	a := rand.Int()
 	b := rand.Int()
 
@@ -152,14 +132,11 @@ func task5() {
 }
 
 func task6() {
-	fmt.Println("## 課題6")
 	for i := 0; i < 10; i++ {
 		fmt.Println(i)
 	}
 }
 func task7() {
-	fmt.Println("## 課題7")
-
 	a := rand.Intn(100)
 
 	fmt.Printf("a: %d\n", a)
@@ -176,8 +153,6 @@ func task7() {
 }
 
 func task8() {
-	fmt.Println("## 課題8")
-
 	add := func(a int, b int) int {
 		return a + b
 	}
@@ -190,8 +165,6 @@ func task8() {
 }
 
 func task9() {
-	fmt.Println("## 課題9")
-
 	lottery := func() (int, bool) {
 		a := rand.Intn(100)
 		return a, a == 50
@@ -201,8 +174,6 @@ func task9() {
 }
 
 func task10() {
-	fmt.Println("## 課題10")
-
 	mustBe50 := func(i int) error {
 		if i == 50 {
 			return nil
@@ -231,8 +202,6 @@ func task10() {
 }
 
 func task11() {
-	fmt.Println("## 課題11")
-
 	// Array
 	a := [5]int{1, 2, 3, 4, 5}
 	fmt.Println(a)
@@ -283,8 +252,6 @@ func task11() {
 }
 
 func task12() {
-	fmt.Println("## 課題12")
-
 	s := []int{1, 2, 3, 4, 5}
 	fmt.Println(s)
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
@@ -319,4 +286,43 @@ func task12() {
 	fmt.Println(s)
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 	fmt.Println()
+
+	s = make([]int, 5)
+	fmt.Println(s)
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+	fmt.Println()
+
+	s = make([]int, 5, 10)
+	fmt.Println(s)
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+	fmt.Println()
+
+	var nilSlice []int
+	fmt.Println(nilSlice)
+	fmt.Printf("len=%d cap=%d %v\n", len(nilSlice), cap(nilSlice), nilSlice)
+	fmt.Printf("Is nil? %t\n", nilSlice == nil)
+	fmt.Println()
+}
+
+func task13() {
+	// 切り出し操作は上記で行なってしまっていたためループの実装
+
+	s := []int{1, 2, 3, 4, 5}
+
+	for i, v := range s {
+		fmt.Println(i, v)
+	}
+
+	for i, _ := range s {
+		fmt.Println(i)
+	}
+
+	for _, v := range s {
+		fmt.Println(v)
+	}
+
+	for i := range s {
+		fmt.Println(i)
+	}
+
 }
