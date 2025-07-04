@@ -394,4 +394,10 @@ func task14() {
 	fmt.Println(mMake == nil)
 	mMake["a"] = 1
 	fmt.Println(mMake)
+
+	// check if the key is present or not
+	elem, ok := m["a"]
+	fmt.Println(elem, ok)
+	elem, ok = m["e"]
+	fmt.Println(elem, ok)
 }
