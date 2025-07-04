@@ -4,6 +4,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"strings"
 )
 
 // Entry point
@@ -26,6 +27,7 @@ func main() {
 		task15,
 		task16,
 		task17,
+		task18,
 	}
 
 	for i, task := range tasks {
@@ -435,4 +437,26 @@ func task17() {
 
 	pi = nil
 	fmt.Println(pi)
+}
+
+func task18() {
+	input := "I love Go programming!"
+
+	fmt.Println(input)
+	fmt.Println(strings.ToLower(input))
+	fmt.Println(strings.ToUpper(input))
+	fmt.Println(strings.ToTitle(input))
+	fmt.Println(strings.Contains(input, "Go"))
+	fmt.Println(strings.ReplaceAll(input, "Go", "Golang"))
+	fmt.Println()
+
+	input = "apple,banana,orange"
+	s := strings.Split(input, ",")
+	fmt.Println(s)
+	fmt.Println(strings.Join(s, ","))
+	fmt.Println()
+
+	input = "   Hello, World!   "
+	fmt.Println(strings.TrimSpace(input))
+
 }
