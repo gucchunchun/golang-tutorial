@@ -25,6 +25,7 @@ func main() {
 		task14,
 		task15,
 		task16,
+		task17,
 	}
 
 	for i, task := range tasks {
@@ -414,4 +415,24 @@ func task15() {
 	// 構造体の作成
 	p := Person{Name: "Alice", Age: 30}
 	fmt.Println(p)
+}
+
+func task17() {
+	var pi *int
+
+	fmt.Println(pi)
+
+	i := 10
+	pi = &i
+
+	fmt.Println(pi)
+	fmt.Println(*pi)
+
+	*pi = 20
+
+	fmt.Println(i)
+	fmt.Println(*pi)
+
+	pi = nil
+	fmt.Println(pi)
 }
