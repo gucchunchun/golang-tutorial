@@ -13,6 +13,7 @@ func (e CustomError) Error() string {
 func returnCustomError(i int) error {
 	if i == 0 {
 		return CustomError{Message: "i must not be 0"}
+
 	}
 	return nil
 }
