@@ -3,8 +3,10 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"math"
 	"math/rand"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -35,6 +37,7 @@ func main() {
 		task20,
 		task21,
 		task22,
+		task23,
 	}
 
 	for i, task := range tasks {
@@ -535,4 +538,39 @@ func task20() {
 	fmt.Println(s)
 	fmt.Println()
 
+}
+
+func task23() {
+	// 書き込み
+	file, err := os.Create("output.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	_, err = file.WriteString("Hello, Go File!")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// 読み込み
+	data, err := os.ReadFile("output.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	fmt.Println(data)
+
+	// 追記
+	file, err = os.OpenFile("output.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	_, err = file.WriteString("This is an appended line.\n")
+	if err != nil {
+		log.Fatal(err)
+	}
 }
