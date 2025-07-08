@@ -39,6 +39,7 @@ func main() {
 		task22,
 		task23,
 		task24,
+		task25,
 	}
 
 	for i, task := range tasks {
@@ -585,4 +586,9 @@ func task23() {
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+func task25() {
+	task25_1()
+	task25_2()
 }
