@@ -1,4 +1,4 @@
-# golang-tutorial-todolist
+# golang-tutorial
 
 
 
