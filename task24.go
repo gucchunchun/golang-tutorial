@@ -19,6 +19,7 @@ func (p Person24) Greeting() string {
 func task24() {
 	data, err := os.ReadFile("task24.json")
 	if err != nil {
+		// mainなど最終的にエラーキャッチする部分で通常は使用する
 		log.Fatal(err)
 	}
 
@@ -29,4 +30,13 @@ func task24() {
 	}
 
 	fmt.Println(p.Greeting())
+
+	p.Name = "Bob"
+
+	json, err := json.Marshal(p)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(string(json))
 }
