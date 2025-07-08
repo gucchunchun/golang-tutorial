@@ -506,7 +506,7 @@ func task19() {
 	f := 3.14
 	i = int(f)
 	fmt.Println(i)
-	fmt.Printf("%T", s)
+	fmt.Printf("%T", i)
 	fmt.Println()
 
 	// bool -> string
@@ -572,7 +572,7 @@ func task23() {
 	}
 	defer file.Close()
 
-	fmt.Println(data)
+	fmt.Println(string(data))
 
 	// 追記
 	file, err = os.OpenFile("output.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
