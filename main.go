@@ -100,6 +100,17 @@ func task3() {
 
 	fmt.Println(i + i)
 	// fmt.Println(i + i8) invalid operation: i + i8 (mismatched types int and int8)
+
+	// byte
+	var by1 byte = 'A'
+	var by2 byte = 65
+	fmt.Println(by1)
+	fmt.Printf("%T", by1)
+	fmt.Println()
+	fmt.Println(by2)
+	fmt.Printf("%T", by2)
+	fmt.Println()
+
 }
 
 func task4() {
