@@ -173,3 +173,7 @@ go run main.go
 
 ### 学び
 
+
+## 課題31: 電卓プログラムを作成する
+
+[golang-tutorial-calculator](https://github.com/gucchunchun/golang-tutorial-calculator)
